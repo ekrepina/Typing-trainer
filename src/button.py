@@ -1,9 +1,10 @@
 import pygame
 
 WORDS_DEPENDENCY = {5: 10, 10: 20, 20: 5}
+START_WORD_COUNT = '5'
 
 
-class Theme:
+class ButtonTheme:
     def __init__(self, x, y, width, height, image=pygame.image.load("assets/dark_button.png")):
         self.theme = 1
         self.image = image
@@ -33,7 +34,7 @@ class Theme:
             self.image = pygame.image.load("assets/light_button.png")
 
 
-class Dict:
+class ButtonDict:
 
     def __init__(self, x, y, width, height, lang="rus"):
         self.theme = 1
@@ -75,11 +76,11 @@ class Dict:
             self.color = (255, 255, 255)
 
 
-class WordCount:
+class ButtonWordCount:
 
     def __init__(self, x, y, width, height):
         self.theme = 1
-        self.count = '5'
+        self.count = START_WORD_COUNT
         self.text = pygame.font.Font("assets/font.ttf", 15).render(self.count, True, (0, 0, 0))
         self.x = x
         self.y = y

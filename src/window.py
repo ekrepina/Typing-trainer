@@ -1,7 +1,7 @@
 import pygame
-from src.button import Theme
-from src.button import Dict
-from src.button import WordCount
+from src.button import ButtonTheme
+from src.button import ButtonDict
+from src.button import ButtonWordCount
 from src.settings import Settings
 from src.statistics import Statistics
 import time
@@ -20,9 +20,9 @@ class Window:
         self.settings = Settings()
         self.text = []
         self.statistics = Statistics()
-        self.theme_button = Theme(10, 10, 30, 30)
-        self.dict_button = Dict(10, 50, 30, 30)
-        self.words_button = WordCount(10, 90, 30, 30)
+        self.theme_button = ButtonTheme(10, 10, 30, 30)
+        self.dict_button = ButtonDict(10, 50, 30, 30)
+        self.words_button = ButtonWordCount(10, 90, 30, 30)
 
     def draw(self):
         if self.settings.theme == 1:
